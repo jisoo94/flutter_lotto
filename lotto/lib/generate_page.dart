@@ -72,7 +72,7 @@ class _GeneratePageState extends State<GeneratePage> {
                   },
                   child: Container(
                     decoration: BoxDecoration(
-                      color: HexColor('#14B1FF'),
+                      color: HexColor('#000000'),
                       borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(10.0),
                         bottomLeft: Radius.circular(10.0),
@@ -97,7 +97,7 @@ class _GeneratePageState extends State<GeneratePage> {
                   onTap: lottoNumberGenerate,
                   child: Container(
                     decoration: BoxDecoration(
-                      color: HexColor('#14B1FF'),
+                      color: HexColor('#000000'),
                       borderRadius: BorderRadius.circular(5),
                     ),
                     alignment: Alignment.center,
@@ -130,7 +130,7 @@ class _GeneratePageState extends State<GeneratePage> {
                   },
                   child: Container(
                     decoration: BoxDecoration(
-                        color: HexColor('#14B1FF'),
+                        color: HexColor('#000000'),
                         borderRadius: const BorderRadius.only(
                           topRight: Radius.circular(10.0),
                           bottomRight: Radius.circular(10.0),
@@ -152,7 +152,7 @@ class _GeneratePageState extends State<GeneratePage> {
             Container(
               width: screenWidth,
               height: 65.0,
-              color: HexColor('#FFBB00').withOpacity(0.16),
+              color: HexColor('#000000'),
               child: Padding(
                 padding: const EdgeInsets.all(5.0),
                 child: generateLottoImage(0, isActivated[0], screenWidth, 65.0),
@@ -162,7 +162,7 @@ class _GeneratePageState extends State<GeneratePage> {
             Container(
               width: screenWidth,
               height: 65.0,
-              color: HexColor('#FFBB00').withOpacity(0.16),
+              color: HexColor('#000000'),
               child: Padding(
                 padding: const EdgeInsets.all(5.0),
                 child: generateLottoImage(1, isActivated[1], screenWidth, 65.0),
@@ -172,7 +172,7 @@ class _GeneratePageState extends State<GeneratePage> {
             Container(
               width: screenWidth,
               height: 65.0,
-              color: HexColor('#FFBB00').withOpacity(0.16),
+              color: HexColor('#000000'),
               child: Padding(
                 padding: const EdgeInsets.all(5.0),
                 child: generateLottoImage(2, isActivated[2], screenWidth, 65.0),
@@ -182,7 +182,7 @@ class _GeneratePageState extends State<GeneratePage> {
             Container(
               width: screenWidth,
               height: 65.0,
-              color: HexColor('#FFBB00').withOpacity(0.16),
+              color: HexColor('#000000'),
               child: Padding(
                 padding: const EdgeInsets.all(5.0),
                 child: generateLottoImage(3, isActivated[3], screenWidth, 65.0),
@@ -192,7 +192,7 @@ class _GeneratePageState extends State<GeneratePage> {
             Container(
               width: screenWidth,
               height: 65.0,
-              color: HexColor('#FFBB00').withOpacity(0.16),
+              color: HexColor('#000000'),
               child: Padding(
                 padding: const EdgeInsets.all(5.0),
                 child: generateLottoImage(4, isActivated[4], screenWidth, 65.0),
@@ -206,7 +206,7 @@ class _GeneratePageState extends State<GeneratePage> {
                   onTap: lottoNumberGenerate,
                   child: Container(
                     decoration: BoxDecoration(
-                        color: HexColor('#14B1FF'),
+                        color: HexColor('#000000'),
                         borderRadius: BorderRadius.circular(5)),
                     alignment: const Alignment(0.0, 0.0),
                     width: 100,
@@ -223,7 +223,7 @@ class _GeneratePageState extends State<GeneratePage> {
                 const Padding(padding: EdgeInsets.all(4.0)),
                 Container(
                   decoration: BoxDecoration(
-                    color: HexColor('#14B1FF'),
+                    color: HexColor('#000000'),
                     borderRadius: BorderRadius.circular(5),
                   ),
                   alignment: const Alignment(0.0, 0.0),
@@ -269,23 +269,41 @@ class _GeneratePageState extends State<GeneratePage> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/image/${randworld[row][0]}.png',
-                width: 38, height: 38),
+            Image.asset(
+                color: HexColor('#FFFFFF'),
+                'assets/image/${randworld[row][0]}.png',
+                width: 38,
+                height: 38),
             const Padding(padding: EdgeInsets.all(5.0)),
-            Image.asset('assets/image/${randworld[row][1]}.png',
-                width: 38, height: 38),
+            Image.asset(
+                color: HexColor('#FFFFFF'),
+                'assets/image/${randworld[row][1]}.png',
+                width: 38,
+                height: 38),
             const Padding(padding: EdgeInsets.all(5.0)),
-            Image.asset('assets/image/${randworld[row][2]}.png',
-                width: 38, height: 38),
+            Image.asset(
+                color: HexColor('#FFFFFF'),
+                'assets/image/${randworld[row][2]}.png',
+                width: 38,
+                height: 38),
             const Padding(padding: EdgeInsets.all(5.0)),
-            Image.asset('assets/image/${randworld[row][3]}.png',
-                width: 38, height: 38),
+            Image.asset(
+                color: HexColor('#FFFFFF'),
+                'assets/image/${randworld[row][3]}.png',
+                width: 38,
+                height: 38),
             const Padding(padding: EdgeInsets.all(5.0)),
-            Image.asset('assets/image/${randworld[row][4]}.png',
-                width: 38, height: 38),
+            Image.asset(
+                color: HexColor('#FFFFFF'),
+                'assets/image/${randworld[row][4]}.png',
+                width: 38,
+                height: 38),
             const Padding(padding: EdgeInsets.all(5.0)),
-            Image.asset('assets/image/${randworld[row][5]}.png',
-                width: 38, height: 38),
+            Image.asset(
+                color: HexColor('#FFFFFF'),
+                'assets/image/${randworld[row][5]}.png',
+                width: 38,
+                height: 38),
           ],
         ),
       );

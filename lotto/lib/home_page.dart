@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
 
@@ -80,82 +81,97 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: SizedBox(
-          height: 600,
-          width: 350,
-          child: Card(
-            color: const Color.fromARGB(255, 237, 247, 255),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(16.0),
-            ),
-            elevation: 10.0,
-            child: Center(
-              child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text(
-                      "이번주 로또 번호\n",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                    ),
-                    FutureBuilder<Post>(
-                      future: latest_number,
-                      builder: (context, snapshot) {
-                        if (snapshot.hasData) {
-                          return Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Image.asset(
-                                'assets/image/${snapshot.data!.num1}.png',
-                                width: 40,
-                                height: 40,
-                              ),
-                              const SizedBox(width: 5),
-                              Image.asset(
-                                'assets/image/${snapshot.data!.num2}.png',
-                                width: 40,
-                                height: 40,
-                              ),
-                              const SizedBox(width: 5),
-                              Image.asset(
-                                'assets/image/${snapshot.data!.num3}.png',
-                                width: 40,
-                                height: 40,
-                              ),
-                              const SizedBox(width: 5),
-                              Image.asset(
-                                'assets/image/${snapshot.data!.num4}.png',
-                                width: 40,
-                                height: 40,
-                              ),
-                              const SizedBox(width: 5),
-                              Image.asset(
-                                'assets/image/${snapshot.data!.num5}.png',
-                                width: 40,
-                                height: 40,
-                              ),
-                              const SizedBox(width: 5),
-                              Image.asset(
-                                'assets/image/${snapshot.data!.num6}.png',
-                                width: 40,
-                                height: 40,
-                              ),
-                              const Text(" + "),
-                              Image.asset(
-                                'assets/image/${snapshot.data!.numBonus}.png',
-                                width: 40,
-                                height: 40,
-                              ),
-                            ],
-                          );
-                        } else if (snapshot.hasError) {
-                          return Text("${snapshot.error}");
-                        }
-                        return const CircularProgressIndicator();
-                      },
-                    )
-                  ]),
+      body: Container(
+        color: HexColor('#FFFFFF'),
+        child: Center(
+          child: SizedBox(
+            height: 600,
+            width: 350,
+            child: Card(
+              color: HexColor('#000000'),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16.0),
+              ),
+              elevation: 10.0,
+              child: Center(
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "이번주 로또 번호\n",
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: HexColor('#FFFFFF')),
+                      ),
+                      FutureBuilder<Post>(
+                        future: latest_number,
+                        builder: (context, snapshot) {
+                          if (snapshot.hasData) {
+                            return Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                  color: HexColor('#FFFFFF'),
+                                  'assets/image/${snapshot.data!.num1}.png',
+                                  width: 40,
+                                  height: 40,
+                                ),
+                                const SizedBox(width: 5),
+                                Image.asset(
+                                  color: HexColor('#FFFFFF'),
+                                  'assets/image/${snapshot.data!.num2}.png',
+                                  width: 40,
+                                  height: 40,
+                                ),
+                                const SizedBox(width: 5),
+                                Image.asset(
+                                  color: HexColor('#FFFFFF'),
+                                  'assets/image/${snapshot.data!.num3}.png',
+                                  width: 40,
+                                  height: 40,
+                                ),
+                                const SizedBox(width: 5),
+                                Image.asset(
+                                  color: HexColor('#FFFFFF'),
+                                  'assets/image/${snapshot.data!.num4}.png',
+                                  width: 40,
+                                  height: 40,
+                                ),
+                                const SizedBox(width: 5),
+                                Image.asset(
+                                  color: HexColor('#FFFFFF'),
+                                  'assets/image/${snapshot.data!.num5}.png',
+                                  width: 40,
+                                  height: 40,
+                                ),
+                                const SizedBox(width: 5),
+                                Image.asset(
+                                  color: HexColor('#FFFFFF'),
+                                  'assets/image/${snapshot.data!.num6}.png',
+                                  width: 40,
+                                  height: 40,
+                                ),
+                                Text(
+                                  " + ",
+                                  style: TextStyle(color: HexColor('#FFFFFF')),
+                                ),
+                                Image.asset(
+                                  color: HexColor('#FFFFFF'),
+                                  'assets/image/${snapshot.data!.numBonus}.png',
+                                  width: 40,
+                                  height: 40,
+                                ),
+                              ],
+                            );
+                          } else if (snapshot.hasError) {
+                            return Text("${snapshot.error}");
+                          }
+                          return const CircularProgressIndicator();
+                        },
+                      )
+                    ]),
+              ),
             ),
           ),
         ),

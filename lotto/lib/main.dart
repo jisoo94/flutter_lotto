@@ -12,7 +12,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "JisooApp",
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+          colorScheme: ColorScheme.fromSwatch().copyWith(
+              primary: Color.fromARGB(255, 0, 0, 0), secondary: Colors.yellow)),
       debugShowCheckedModeBanner: false,
       // home: const MyHomePage(),
       home: const RootPage(),
