@@ -311,7 +311,7 @@ class _GeneratePageState extends State<GeneratePage> {
       return Container(
         width: w,
         height: h,
-        color: HexColor('#FFC266'),
+        color: HexColor('#FFFFFF'),
       );
     }
   }
